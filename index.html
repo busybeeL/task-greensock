@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+        <link rel = "stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300, 600">
+    </head>
+    <body>
+        <div class="background-night">
+            <p>Night Night</p>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+        </div>
+        <ul>
+            <li>*</li>
+            <li>*</li>
+            <li>*</li>
+            <li>*</li>
+            <li>*</li>
+            <li>*</li>
+        </ul>
+
+        <div class="background-morning">
+            <p>Good Morning!</p>
+        </div>
+        <div class="sun">
+            sun
+        </div>
+        <div class="cloud-01">
+            cloud
+        </div>
+        <div class="cloud-02">
+            cloud
+        </div>
+        <div class="cloud-03">
+            cloud
+        </div>
+        <script>
+            //copy
+            TweenMax.from("p", 0.5, {opacity: 0 , delay: 0.5});
+            TweenMax.to("p", 0.5, {opacity: 0, delay:1});
+            TweenMax.to("p", 2, {opacity: 1, delay:1.5, ease: Power0.easeNone});
+            //star-odd
+            TweenMax.from("span:nth-child(odd)", 0.7, {opacity: 0, delay: 0.5});
+            TweenMax.to("span:nth-child(odd)", 0.7, {opacity: 1, delay: 1.9});
+            TweenMax.to("span:nth-child(odd)", 0.7, {opacity: 0, delay: 1.2});
+            TweenMax.to("span:nth-child(odd)", 0.7, {opacity: 0, delay: 2.6});
+            TweenMax.to("span:nth-child(odd)", 0.7, {opacity: 1, delay: 3.3});
+            //star-even
+            TweenMax.from("span:nth-child(even)", 0.7, {opacity: 0, delay: 1.7});
+            TweenMax.to("span:nth-child(even)", 0.7, {opacity: 1, delay: 2.4});
+            TweenMax.to("span:nth-child(even)", 0.7, {opacity: 0, delay: 3.1});
+            TweenMax.to("span:nth-child(even)", 0.7, {opacity: 1, delay: 3.8});
+            //shooting star
+            TweenMax.to("li", 1, {
+                opacity: 1, 
+                delay: 0.5, 
+            });
+            TweenMax.to("li:first-child", 0.3, {
+                opacity: 0, 
+                delay: 2, 
+                top: "34%",
+                left: "60%"
+            });
+            TweenMax.to("li:nth-child(2)", 0.3, {
+                opacity: 0, 
+                delay: 2.5, 
+                top: "43%",
+                left: "26%"
+            });
+            TweenMax.to("li:nth-child(3)", 0.2, {
+                opacity: 0, 
+                delay: 2.7, 
+                top: "51%",
+                left: "70%"
+            });
+            TweenMax.to("li:nth-child(4)", 0.3, {
+                opacity: 0, 
+                delay: 2.9, 
+                top: "56%",
+                left: "11%"
+            });
+            TweenMax.to("li:nth-child(5)", 0.2, {
+                opacity: 0, 
+                delay: 3.0, 
+                top: "33%",
+                left: "26%"
+            });
+            TweenMax.to("li:nth-child(6)", 0.3, {
+                opacity: 0, 
+                delay: 3.4, 
+                top: "42%",
+                left: "48%"
+            });
+            TweenMax.to("span, li", 1, {
+                opacity: 0,
+                delay: 5
+            });
+            TweenMax.to(".background-night", 2, {
+                ease: Power1.easeOut,
+                delay: 5,
+                top: "-100%"
+            });
+            TweenMax.to(".background-morning", 2, {
+                ease: Bounce.easeOut,
+                delay: 4.3,
+                top: "-100%",
+                display: "table",
+                background: "linear-gradient(rgb(255, 89, 89), rgb(255, 139, 56))"
+            });
+            //sun
+            TweenMax.to(".sun", 1, {
+                ease: Bounce.easeOut,
+                scale: 1,
+                delay: 5.7
+            });
+            //cloud
+            TweenMax.from(".cloud-01", 5, {
+                opacity: 0,
+                left: "26%",
+                delay: 6.3
+            });
+            TweenMax.from(".cloud-02", 5, {
+                opacity: 0,
+                left: "33%",
+                delay: 6.5
+            });
+            TweenMax.from(".cloud-03", 5, {
+                opacity: 0,
+                right: "23%",
+                delay: 6.8
+            });
+        </script>
+    </body>
+</html>
